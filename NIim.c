@@ -5,18 +5,18 @@ using namespace std;
 
 bool canWinNim(int n)
 {
+	bool result=true;
 	//cout<<n<<"test"<<endl;
-	if (n==1||n==2||n==3||n==5){
+	if (n%4==1||n%4==2||n%4==3){
 		//cout<<"win"<<endl;
-		return true;
+		result=true;
 	}
-	if(n==4||n==0)
+	if(n%4==0)
 	{
 		//cout<<"lose "<<endl;
-		return false;
+		result=false;
 	}
-	return (canWinNim(n-2)||canWinNim(n-3)||canWinNim(n-4));
-	
+	return result;
 
 }
 
@@ -25,7 +25,7 @@ bool canWinNim(int n)
 
 int main()
 {
-	int n=134;
+	int n=44;
 	bool result=canWinNim(n);
 	if(result)
 		cout<<"you can win"<<endl;
