@@ -1,21 +1,40 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 bool wordPattern(string pattern, string str) 
 {
 	int len_p=pattern.length();
 	int len_s=str.length();
-	int p=0;
-	for (int i = 0; i < len; ++i)
-		for (int r = 0; r < len; ++r)
+	int *chgform_p=new int[len_p];
+	int *chgform_s=new int[len_p];
+	for (int i = 0; i < len_p; ++i)
+	{
+		chgform_p[i]=0;
+		chgform_s[i]=0;
+	}
+	for (int i = 0; i < len_p; ++i)
+	{
+		for (int r = 0; r < len_p ; ++r)
 		{
 			/* code */
 		}
+	}
+
+
+
+
+
+
+
+
+
+	return true;
 
 }
 
-int int main()
+int main()
 {
 	/* code */
 	string pattern="aabb";
